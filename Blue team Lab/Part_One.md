@@ -1,6 +1,6 @@
 # Blue Team Home lab part one 
 
-## Objective
+## Network 
 
 
 This project is aimed at building a full blue team including Firewalls, Network topology, Antivirus, SIEM, EDR, and more 
@@ -11,7 +11,9 @@ We are going to have 5 different VLANs for this project
 2. VLAN 10: This is the corporate WAN which will include a Kali machine to simulate attacks, this VLAN will not have access to the real internet or my machine and will only have access to VLAN 20.
 3. VLAN 20: this is the corporate LAN network here we can find the servers and end devices and will only have access to the fake internet network
 4. VLAN 50: This is the security VLAN with security tools and access to the real internet so we can use public tools for analysis and finally the corporate network to retrieve logs 
-5. VLAN 99: this will be an isolated LAN network for malware analysis 
+5. VLAN 99: this will be an isolated LAN network for malware analysis
+I am going to name this domain (E Corp) ;)
+Here is the Network Information : 
 
 | Name          | Domain | VLAN | Subnet       | Gateway     |
 | ------------- | ------ | ---- | ------------ | ----------- |
@@ -21,6 +23,8 @@ We are going to have 5 different VLANs for this project
 | Security      | E corp | 50   | 10.0.50.0/24 | 10.0.50.254 |
 | Isolated LAN  | N/A    | 99   | 10.0.99.0/24 | 10.0.99.254 |
 
+And here is the Network Topology for the 
+!
 ### Tools Used
 
 - VMware workstation for building and managing the machines and the VLANs
@@ -28,6 +32,6 @@ We are going to have 5 different VLANs for this project
 - pfSense which is a free open-source router/firewall
 - Virtual machines 
 
-## Steps
+
 
 
