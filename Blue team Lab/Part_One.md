@@ -24,15 +24,28 @@ Here is the Network Information :
 | Security      | E corp | 50   | 10.0.50.0/24 | 10.0.50.254 |
 | Isolated LAN  | N/A    | 99   | 10.0.99.0/24 | 10.0.99.254 |
 
-And here is the Network Topology for the 
-!
+And here is the Network Topology   
+
+![NetworkTopology](/Attachment/Image14.png "E Corp Network topology")
+
+## VLAN creation 
+
+Now we are going to create these networks in our VMware
+
+In VMware go to _Edit > Virtual Network Editor_ then we can add the 4 networks *vmnet10*, **vmnet20**, **vmnet50**, and **vmnet99** all four network types should be *Host-only*.
+
+Next for each network, we gonna uncheck *use local DHCP* cuz we are going to use our firewall as a DHCP server, finally we should set up the subnet IPs as in the table above 
+
+here is the final result : 
+
+![Virtual Network Editor](/Attachment/Image01.png "Virtual Networks")
 ### Tools Used
 
 - VMware workstation for building and managing the machines and the VLANs
 - Drow.io to build the Network topology
 - pfSense which is a free open-source router/firewall
-- Virtual machines 
-
-
+- Virtual machines
+  
+Just like that we made the virtual networks and assigned them the correct subnet addresses next we are going to set up pfSense and set our rules for the Firewall
 
 
