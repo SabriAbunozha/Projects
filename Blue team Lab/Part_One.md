@@ -4,7 +4,7 @@
 
 
 This project is aimed at building a full blue team including Firewalls, Network topology, Antivirus, SIEM, EDR, and more 
-using virtualization we can do all of that in this project we are going to have 
+using virtualization we can do all of that in this project
 We are going to have 5 different VLANs for this project 
 
 1. VLAN 1: management VLAN which we can access the firewall from 
