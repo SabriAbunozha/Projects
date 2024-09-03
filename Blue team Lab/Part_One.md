@@ -13,6 +13,7 @@ We are going to have 5 different VLANs for this project
 4. VLAN 50: This is the security VLAN with security tools and access to the real internet so we can use public tools for analysis and finally the corporate network to retrieve logs 
 5. VLAN 99: this will be an isolated LAN network for malware analysis
 I am going to name this domain (E Corp) ;)
+
 Here is the Network Information : 
 
 | Name          | Domain | VLAN | Subnet       | Gateway     |
