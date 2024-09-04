@@ -1,6 +1,6 @@
 2024-09-02 20:46
 
-Tags:[[Projects]], [[BlueTeamLab]]
+Tags:Projects, BlueTeamLab
 
 ## pfSense firewall
 
