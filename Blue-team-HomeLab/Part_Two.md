@@ -1,6 +1,6 @@
 2024-09-02 20:46
 
-# Blue team Home Lab part Two
+# Blue team Home Lab Part Two
 Tags: Projects, BlueTeamLab
 
 ## pfSense firewall
@@ -24,7 +24,7 @@ we have 5 networks so we have to specify them, the first one is just a bridged i
 
 for the installation we just use the default settings for everything and at the end we will have it booted up with two configured interfaces, WAN and LAN 
 
-![[Pasted image 20240902205736.png]]
+![pfSense](/Attachment/Image02.png "pfSense")
 
 now we have to assign the correct IP addresses for the two interfaces 
 which following this table :
@@ -38,6 +38,8 @@ which following this table :
 | Corporate LAN | 10.0.20.254/24  |
 | Security      | 10.0.50.254/24  |
 | isolated LAN  | 10.0.99.254/24  |
+
+
 after we set the management we can access the web configurator on 10.0.1.50
 with the default credentials *Username: admin Password: pfsense*
 the setup wizard is straightforward you just have to put the domain name that you want to use and the hostname also make sure to use a DNS server I used 8.8.8.8 and 8.8.4.4
@@ -61,46 +63,55 @@ the next step is to enable and configure each interface with the correct descrip
 12. **Block bogon networks:** unchecked (this field should be checked for WAN interface only)
 
 
-![[Pasted image 20240902211448.png]]
+![VLANSettings](/Attachment/Image03.png "Vlan10")
 
 finally, it would look like this 
 
-![[Pasted image 20240902211836.png]]
+![result](/Attachment/Image05.png)
 
 now the rules of the firewall you can edit the rules by going to _firewall>rules_ and selecting the interface which you want to edit 
 ### WAN
 
 keep it as is we don't need to change anything 
-![[Pasted image 20240902212650.png]]
+
+![Result](/Attachment/Image06.png)
+
 ### management
 
 Same thing here we don't need to change anything 
-![[Pasted image 20240902212706.png]]
+
+![Mngmnt](/Attachment/Image07.png)
 
 ### Corporate_WAN_VLAN10
 
 we need to allow traffic toward VLAN 20 and allow traffic inside VLAN 10 
-![[Pasted image 20240902212824.png]]
+
+![VLAN10](/Attachment/Image08.png)
 
 ### CORPORATE_LAN_VLAN20  
 
 we should do the same because we are going to simulate the access to fake internet 
-![[Pasted image 20240902213731.png]]
+
+![VLAN20](/Attachment/Image09.png)
 
 
 ### Security_VLAN50 
 
 here we have to block access to the WAN, Management, and corporate WAN VLAN10 and allow the rest of the traffic ( internet access, Isolated VLAN, and corporate LAN )
-![[Pasted image 20240902214107.png]]
+
+![VLAN50](/Attachment/Image11.png)
 
 ### isolation 
 
 we just need to block all traffic 
-![[Pasted image 20240902214147.png]]
+
+![VLAN99](/Attachment/Image12.png)
+
 Done now we just have to set the outbound rules to allow the security network access to the internet and simulate other networks access to the internet through the fake WAN _Firewall>NAT>outbound_
 
 just do the same as the following rules
-![[Pasted image 20240902214529.png]]
+
+![NetworkTopology](/Attachment/Image13.png)
 
 Just like that, we have the firewall set up and now we can start adding machines to the Network 
 # References 
