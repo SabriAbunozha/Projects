@@ -42,7 +42,7 @@ here is the final result :
 ### Tools Used
 
 - VMware workstation for building and managing the machines and the VLANs
-- Drow.io to build the Network topology
+- Drow.io to build diagrams and I used it to make the Network topology
 - pfSense which is a free open-source router/firewall
 - Virtual machines
   
