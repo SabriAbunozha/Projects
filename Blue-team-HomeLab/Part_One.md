@@ -49,4 +49,7 @@ here is the final result :
   
 Just like that we made the virtual networks and assigned them the correct subnet addresses next we are going to set up pfSense and set our rules for the Firewall
 
+# References 
+[Building Blue Team Home Lab Part 2 - Network Topology | facyber](https://facyber.me/posts/blue-team-lab-guide-part-2/)
+
 
