@@ -45,6 +45,7 @@ here is the final result :
 - Drow.io to build diagrams and I used it to make the Network topology
 - pfSense which is a free open-source router/firewall
 - Virtual machines
+- Obsidian which is the tool that I use to write my notes in an MD format
   
 Just like that we made the virtual networks and assigned them the correct subnet addresses next we are going to set up pfSense and set our rules for the Firewall
 
