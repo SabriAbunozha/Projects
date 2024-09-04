@@ -111,7 +111,7 @@ Done now we just have to set the outbound rules to allow the security network ac
 
 just do the same as the following rules
 
-![NetworkTopology](/Attachment/Image13.png)
+![OUTBOUND_RULES](/Attachment/Image13.png)
 
 Just like that, we have the firewall set up and now we can start adding machines to the Network 
 # References 
