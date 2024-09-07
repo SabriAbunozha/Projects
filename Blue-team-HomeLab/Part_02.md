@@ -1,7 +1,6 @@
 2024-09-02 20:46
 
 # Blue team Home Lab Part Two
-Tags: Projects, BlueTeamLab
 
 ## pfSense firewall
 
