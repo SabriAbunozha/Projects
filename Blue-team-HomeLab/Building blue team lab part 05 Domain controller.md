@@ -6,7 +6,8 @@
 
 Download the iso file from [here](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019) which is going to give you a free server for 180 days after installing you can take a snapshot 
 start the configuration by changing the adapter to VLAN 20 from VMware then we can set the static IP addresses :
-![[Image24.png]]
+
+![staticIP](/Attachment/Image24.png)
 
 then we can change the server name 
 
