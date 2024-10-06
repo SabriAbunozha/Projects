@@ -2,7 +2,7 @@
 
 
 
-# security Onion installation 
+# Security Onion installation 
 
 
 We can Download the Iso for the security Onion from [here](https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md) after downloading it we should set up the virtual machine with the following specifications: 
