@@ -25,8 +25,7 @@ for the installation we just use the default settings for everything and at the 
 
 ![pfSense](/Attachment/Image02.png "pfSense")
 
-now we have to assign the correct IP addresses for the two interfaces 
-which following this table :
+now we have to assign the correct IP addresses for the two interfaces following this table :
 
 
 | Interface     | IP address      |
