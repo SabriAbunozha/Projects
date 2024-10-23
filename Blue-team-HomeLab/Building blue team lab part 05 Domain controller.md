@@ -73,6 +73,7 @@ Now we can see a pool in the address pool
 First, we need to set up a reverse zone by going to _tools>DNS_ and right-clicking on reverse lookup zones then clicking on create a new zone skip everything till you come to the Network ID part and enter our network IP 10.0.20
 
 ![[Image37.png]](/Attachment/Image37.png)
+
 Now we can add our devices manually but we are going to do the firewall only and if we needed we can do new entries later go to _Forward lookup Zones > evil.corp_ and right click and _Net host (A or AAAA)_
 Enter the name and the IP address and check the _create associate pointer_ 
 
