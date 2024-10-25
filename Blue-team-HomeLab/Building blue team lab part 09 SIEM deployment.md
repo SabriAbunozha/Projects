@@ -7,7 +7,7 @@
 
 We can Download the Iso for the security Onion from [here](https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md) after downloading it we should set up the virtual machine with the following specifications: 
 
-1. 16GB RAM
+1. 6GB RAM
 2. 200GB or more HDD
 3. 8 cores would be good
 4. vmnet50
