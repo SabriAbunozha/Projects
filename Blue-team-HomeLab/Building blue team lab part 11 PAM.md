@@ -1,6 +1,5 @@
 2024-10-30 16:06
 
-Tags:[[BlueTeamLab]], [[Projects]]
 
 # Privileged Access Management (PAM)
 
@@ -15,17 +14,17 @@ To install and configure JumpServer, we first need to set up an Ubuntu server wi
 - **40 GB Hard Disk**
 - **4-Core Processor**
 - **8 GB RAM**
-- **VLAN 50**: So we can access it from outside of our network later.
+- **VLAN 50**: We can access it from outside our network later.
 
 now just continue the default installation 
 
 ## Network Configuration 
 
-i forgot to plug it to VLAN 50 on setup so i did it after so we have to edit the netplan file which is in my case */etc/netplan/50-cloud-init.yaml* 
+I forgot to plug it into VLAN 50 on setup so I did it after so we have to edit the netplan file which is in my case */etc/netplan/50-cloud-init.yaml* 
 
-![[Image106.png]]
+![[Image106.png]](/Attachment/Image106.png)
 
-After we have to use `Sudo netplan apply` Now we have access to the network while being on our VLAN 50
+After we have used `Sudo netplan apply` Now we have access to the network while being on our VLAN 50
 ## Installing JumpServer
 
 To install JumpServer, execute the following command. This will handle the installation and initial configuration: 
@@ -34,10 +33,11 @@ To install JumpServer, execute the following command. This will handle the insta
 curl -sSL https://github.com/jumpserver/jumpserver/releases/latest/download/quick_start.sh | bash
 
 ```
-> **Note**: You must switch to the `root` user by running `sudo su` before starting the installation.
+> **Note**: Before starting the installation, you must switch to the `root` user by running `sudo su`.
 
-![[Image107.png]]
-![[Image108.png]]
+![[Image107.png]](/Attachment/Image107.png)
+![[Image108.png]](/Attachment/Image108.png)
+
 
 After installation, JumpServer will be accessible at http://10.0.50.77:80.
 Use the following default credentials to log in for the first time:
@@ -53,25 +53,28 @@ Password: `ChangeMe`
 2. **Enable MFA (Multi-Factor Authentication)**  
     Since the server will be exposed to network traffic, it’s recommended to enable MFA for additional security. To enable MFA, go to the **Settings > MFA** section and follow the prompts.
 
-![[Image109.png]]
+![[Image109.png]](/Attachment/Image109.png)
+
 
 you will be prompted to change the password of the admin user 
 
-![[Image110.png]]
+![[Image110.png]](/Attachment/Image110.png)
+![[Image111.png]](/Attachment/Image111.png)
 
-![[Image111.png]]
 
 3. **Add Users**  
 	To add new users who will access specific resources through JumpServer, navigate to **Users > Add User**. Here, you can specify usernames, roles, and permissions for each user.
 
-![[Image112.png]]
+![[Image112.png]](/Attachment/Image112.png)
+
 
 4. **Add Assets (Servers and Endpoints)**  
 	After users are added, you can register servers, databases, or remote applications as assets within JumpServer.
 	- Go to **Assets > Create** and fill in the required details for each asset, such as IP address, hostname, and protocols (e.g., SSH for Linux servers or RDP for Windows servers).
 	- Define the credentials (username and password) that users will need to authenticate to these assets.
 
-![[Image113.png]]
+![[Image113.png]](/Attachment/Image113.png)
+
 
 5. **Enable SSH and RDP on Assets**  
     Ensure SSH (for Linux servers) and RDP (for Windows servers) are enabled on the target machines so that JumpServer can initiate connections.
@@ -82,15 +85,17 @@ you will be prompted to change the password of the admin user
     - Define the level of access each user or group has (e.g., full access, read-only) to prevent unauthorized access.
 
 
-![[Image114.png]]
+![[Image114.png]](/Attachment/Image114.png)
+
 ## Testing Access
 
-With configuration complete, you can now test the setup:
+With the configuration complete, you can now test the setup:
 1. Log in with a user account.
 2. From the JumpServer web interface, select the asset you want to access.
 3. JumpServer will establish the connection to the endpoint using SSH, RDP, or the relevant protocol, as per the asset's configuration.
 
-![[Image115.png]]
+![[Image115.png]](/Attachment/Image115.png)
+
 
 You should now be successfully connected to the asset, with session activity being monitored and recorded as per JumpServer's configuration.
 
