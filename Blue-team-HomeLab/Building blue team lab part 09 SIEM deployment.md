@@ -48,7 +48,7 @@ install Zeek or Suricata wouldn't matter
 
 Now we should set up the admin soc user in my case socadmin@evil.corp also set up the password 
 
-![[image85.png]](/Attachment/image.png)
+![[image85.png]](/Attachment/image85.png)
 
 Now we can set the FQDN by selecting Other 
 
